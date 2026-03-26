@@ -6,8 +6,7 @@
         zmk,physical-layout = &physical_layout0;
     };
 
-    /* Define ext power locally instead of trying to patch a board node */
-    ext_power: ext_power {
+    vcc_power_ctrl: vcc_power_ctrl {
         compatible = "zmk,ext-power-generic";
         control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
         init-delay-ms = <50>;
@@ -30,6 +29,7 @@
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "VCC Only";
+        kscan = <&mock_kscan>;
         transform = <&default_transform>;
     };
 };
