@@ -1,6 +1,6 @@
 if SHIELD_VCC_ONLY
 
 config ZMK_KEYBOARD_NAME
-    default "VCC_ONLY"
+    default "VCC Only"
 
 endif

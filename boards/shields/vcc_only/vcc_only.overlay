@@ -6,6 +6,13 @@
         zmk,physical-layout = &physical_layout0;
     };
 
+    /* Define ext power locally instead of trying to patch a board node */
+    ext_power: ext_power {
+        compatible = "zmk,ext-power-generic";
+        control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+        init-delay-ms = <50>;
+    };
+
     mock_kscan: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
@@ -17,8 +24,7 @@
         compatible = "zmk,matrix-transform";
         rows = <0>;
         columns = <0>;
-        map = <
-        >;
+        map = <>;
     };
 
     physical_layout0: physical_layout_0 {

@@ -1,5 +1,7 @@
-Minimal no-key ZMK shield that follows the official no-key dongle pattern:
-- mock kscan with 0 rows/0 cols/0 events
-- zero-sized matrix transform
-- empty keymap
-- board-specific overlay for nice_nano that flips ext-power polarity so P0.13 HIGH enables VCC
+This is a minimal ZMK shield whose only purpose is to boot an application and
+define an ext-power node with GPIO0.13 active-high.
+
+Important:
+- There is intentionally NO boards/nice_nano.overlay file in this package.
+- This avoids the previous parse error caused by trying to patch /ext-power.
+- The package uses zmk,kscan-mock per the dongle guide.
