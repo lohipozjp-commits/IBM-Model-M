@@ -23,7 +23,7 @@
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
 
-    shifter: 595@0 {
+    shifter: gpio_595@0 {
         compatible = "zmk,gpio-595";
         status = "okay";
         gpio-controller;
