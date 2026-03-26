@@ -1,0 +1,7 @@
+file_format: "1"
+id: vcc_only
+name: VCC Only
+type: shield
+requires: [nice_nano]
+features:
+  - keys
