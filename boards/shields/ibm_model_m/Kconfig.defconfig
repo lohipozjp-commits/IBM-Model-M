@@ -6,4 +6,7 @@ config ZMK_KEYBOARD_NAME
 config SPI
     default y
 
+config ZMK_KSCAN_MATRIX_POLLING
+    default y
+
 endif
